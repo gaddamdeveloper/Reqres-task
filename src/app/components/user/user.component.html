@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-bordered mt-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>color</th>
+                <th>Pantone_value</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let user of users">
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.year}}</td>
+                <td [ngStyle]="{'background-color':user.color,'border':'2px solid grey'}">{{user.color}}</td>
+                <td>{{user.pantone_value}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

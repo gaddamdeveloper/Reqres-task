@@ -1,0 +1,24 @@
+
+<div class="container mt-3 w-25">
+    <img src="https://drive.google.com/uc?export=view&id=1hvRAGrdq0SqFBZApx2--IcuDf-DOmOBH" alt="" />
+    <div class="alert alert-danger d-flex align-items-center " role="alert" *ngIf="errorMessage">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+        <div>
+            login failed!!!!!
+        </div>
+        </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="text" id="text" class="form-control " formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" formControlName="password">
+        </div>
+        <input type="checkbox"><span>by creating or logging into an account,you are agreeing with our <b>terms &conditions</b>and<b>privacy policys</b></span>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="!loginForm.valid">Next</button>
+        </div>
+    </form>
+</div>
